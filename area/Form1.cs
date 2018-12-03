@@ -16,5 +16,22 @@ namespace area
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                int w, h;
+                w = int.Parse(wBox.Text);
+                h = int.Parse(hBox.Text);
+                int area = w * h;
+                aBox.Text = area.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Ye head shot that ain't no number");
+            }
+        }
     }
 }
